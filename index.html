@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Neighborhood Map</title>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- HOME LOGO  -->
+        <div id="main">
+            <span onclick="openNav()"><img class="logo img-responsive" src="img/menu-icon.png" alt="Nav Menu" width="43" height="43"></span>
+        </div>
+    </header>
+        <!-- SIDE NAV -->
+    <aside id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3> Visit Florida </h3>
+        <div id="locations">
+            <h2>Search</h2>
+            <input id="search" placeholder="Search by Name" data-bind="textInput: userInput, event: {keyup: filterMarkers}">
+        </div>
+        <div id="locations">
+            <h2>Locations</h2>
+            <ul id="list-view" data-bind="foreach: visible">
+                <li id="list-name" data-bind="text: name, click: $parent.showInfo"></li>
+            </ul>
+        </div>
+    </aside>
+    <div id="map">
+    </div>
+    <div id="googleMap-API-error"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/libs/knockout-3.2.0.js"></script>
+    <script src="js/map.js"></script>
+    <!-- Load Google Maps asynchronously-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfOAQNcTY7T_UA7elPsaqHMToOh_SYVIQ&callback=initMap" onerror="googleError()"></script>
+
+
+</body>
+
+</html>
