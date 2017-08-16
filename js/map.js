@@ -233,7 +233,8 @@ var ViewModel = function() {
                 });
             },
             // Alert the user on error infowindow
-            error: function(e) {
+            error: function(errortext) {
+                infowindow.open(map, this);
                 infowindow.setContent('<h4>Foursquare data is unavailable.</h4>');
             }
         });
