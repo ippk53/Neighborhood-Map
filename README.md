@@ -4,7 +4,7 @@ Udacity Front-End Web Developer project with Google Maps APIs, Knockout JavaScri
 
 # Setup
 - Open index.html file.
-- Live Version:
+- Live Version: https://ippk53.github.io/Neighborhood-Map/
 
 # Features
 - Navbar is hidden and toggleable by clicking orange home icon
